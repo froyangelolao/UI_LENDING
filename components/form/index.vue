@@ -1,6 +1,7 @@
 <template>
     <div>
         <NuxtLayout name="admin">
+            <button @click="AddStudent">Add Student</button>
 
             <Head>
                 <Title>Students - {{ runtimeConfig.public.appName }}</Title>
@@ -29,8 +30,13 @@
                                 <td>
                                     <span>{{ student.allowance }}</span>
                                 </td>
-                                <td>
-                                    Edit
+                                <td class="flex">
+                                    <FormButton type="submit" buttonStyle="primary" class="w-full mr-2" @click="editStudent(student)">
+                                        Edit
+                                    </FormButton>
+                                    <FormButton type="submit" buttonStyle="primary" class="w-full" @click="deleteStudent(student.id)">
+                                        Delete
+                                    </FormButton>
                                 </td>
                             </tr>
                         </template>
@@ -45,6 +51,9 @@
 
 <script setup lang="ts">
 import { studentService } from '@/components/api/admin/StudentService'
+
+import { useRouter } from 'vue-router';
+const router = useRouter();
 
 const runtimeConfig = useRuntimeConfig()
 let currentTablePage = 1
@@ -68,9 +77,47 @@ const state = reactive({
 })
 
 onMounted(() => {
+    //pag mag enter sa dash eh read ni una
     fetchStudents()
 })
 
+function AddStudent(id: any): any {
+  navigateTo('/admin/dashboard/AddStudent/');
+}
+
+// editFunction. dri pud ipasa ang id sa gipili na row padulong StudentService
+function editStudent(student: any): any {
+  studentService.setId(student.id);
+
+  studentService.setFirstName(student.firstname);
+  studentService.setLastName(student.lastname);
+  studentService.setBirthDay(student.birthdate);
+  studentService.setCourse(student.course);
+  studentService.setAllowance(student.allowance);
+  studentService.setAge(student.age);
+
+
+  navigateTo('/admin/students/editStudent/');
+}
+
+
+//delete function
+async function deleteStudent(id: any)
+{
+    const params = {
+        //empty
+    }
+    const response = await studentService.deleteStudent(params, id);
+    fetchStudents();
+
+    if(response != null)
+    {
+        alert('Delete Sucessfully!');
+        navigateTo('/admin/students');
+    }
+}
+
+//method sa pag kuha sa db
 async function fetchStudents() {
     state.isTableLoading = true
     state.error = null
@@ -80,6 +127,7 @@ async function fetchStudents() {
             sortField: state.sortData.sortField,
             sortOrder: state.sortData.sortOrder,
         }
+
         const response = await studentService.getStudents(params)
         state.students = response
     } catch (error: any) {
@@ -113,7 +161,4 @@ function handleFilter(value: any) {
     fetchStudents()
 }
 
-function edit(account: any) {
-    navigateTo(`/admin/accounts/edit/${account.uuid}`)
-}
 </script>
