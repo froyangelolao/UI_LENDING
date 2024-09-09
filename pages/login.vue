@@ -23,6 +23,10 @@
           
           class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
         />
+        <FormError
+          :error="v$.email && v$.email.$errors && v$.email.$errors.length > 0 ? v$.email.$errors[0].$message : null" />
+        <FormError
+          :error="state.error && state.error.errors && state.error.errors.email && state.error.errors.email[0]" />
       </div>
       <div>
         <label class="font-medium"> Password </label>
@@ -34,6 +38,10 @@
           
           class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
         />
+        <FormError
+          :error="v$.password && v$.password.$errors && v$.password.$errors.length > 0 ? v$.password.$errors[0].$message : null" />
+        <FormError
+          :error="state.error && state.error.errors && state.error.errors.password && state.error.errors.password[0]" />
       </div>
       <div class="flex items-center justify-between text-sm">
         <div class="flex items-center gap-x-3">
@@ -112,8 +120,6 @@ async function login() {
     
     state.error = null
     v$.value.$validate()
-    alert(v$.value.$error);
-    alert(state.password);
     if (!v$.value.$error) {
         state.isPageLoading = true
         try {
