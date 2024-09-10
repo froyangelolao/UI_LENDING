@@ -68,7 +68,7 @@
             <!-- Sidebar component -->
             <div class="flex grow flex-col gap-y-3 overflow-y-auto bg-gray-900 px-4 pb-4">
                 <div class="flex h-16 shrink-0 items-center">
-                    <!-- <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"/>-->
+                    <!-- <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"/> -->
                 </div>
                 <nav class="flex flex-1 flex-col">
                     <ul role="list" class="flex flex-1 flex-col gap-y-4">
@@ -220,47 +220,32 @@ import { UserIcon, UserCircleIcon } from "@heroicons/vue/24/outline";
 const sidebarOpen = ref(false);
 const openPeopleDropdown = ref(false); 
 
+
 const navigation = [
-    { name: "Dashboard", href: "/dashboard", icon: ChartPieIcon, current: false },
-    { name: "Product", icon: ShoppingBagIcon, current: false,
-    children: [
-            
-    { name: "Products", href: "/Product", icon: ShoppingBagIcon, current: false },
-    { name: "Product Categories", href: "/categories", icon: FolderIcon, current: false },
-        ],
-    },
-    { name: "Adjustments", href: "/adjustments", icon: AdjustmentsHorizontalIcon, current: false },
-    { name: "Peoples",
-        icon: UsersIcon,
-        current: false,
+    { name: "Dashboard", href: "#", icon: ChartPieIcon, current: false },
+
+    { name: "Client Groups", href:"#", icon: ShoppingBagIcon, current: false,},
+    
+    { name: "Personality", icon: UsersIcon, current: false,
         children: [
-            { name: "Suppliers", href: "/supplier", icon: TruckIcon, current: false },
-            { name: "Customers", href: "/customers", icon: UserIcon, current: false },
-            { name: "Employees", href: "/employees", icon: UserCircleIcon, current: false },
+            { name: "Employee", href: "/#", icon: TruckIcon, current: false },
+            { name: "Admin", href: "/#", icon: UserIcon, current: false },
         ],
     },
-    { name: "Transactions",
-        icon: UsersIcon,
-        current: false,
+
+    { name: "Transactions", icon: UsersIcon, current: false,
         children: [
-            { name: "Bills", href: "/bills", icon: CurrencyDollarIcon, current: false },
-            { name: "Payments", href: "/payments", icon:  CreditCardIcon, current: false },
-            { name: "Sales Invoice", href: "/salesinvoice", icon: DocumentTextIcon, current: false },
-            { name: "Collections", href: "/collections", icon: DocumentDuplicateIcon, current: false },
-            { name: "Credit Memo", href: "/creditmemo", icon: UserCircleIcon, current: false },
-            { name: "Damages / Spoilage", href: "/payments", icon:  CreditCardIcon, current: false },
-            { name: "Replacement", href: "/employees", icon: UserCircleIcon, current: false },
+            { name: "Loan Application", href: "/#", icon: CurrencyDollarIcon, current: false },
+            { name: "Loan Release", href: "/#", icon:  CreditCardIcon, current: false },
+            { name: "Payment Schedule", href: "/#", icon: CreditCardIcon, current: false },
         ],
     },
+
+    { name: "Payments", href: "/#", icon: CreditCardIcon, current: false },
+    { name: "Report", href: "/#", icon: LockClosedIcon, current: false },
     { name: "Roles / Permissions", href: "/roles", icon: LockClosedIcon, current: false },
-    { name: "Returns", href: "/roles", icon: LockClosedIcon, current: false,
-    children: [
-            { name: "Customer Returns", href: "/bills", icon: ArrowLongLeftIcon, current: false },
-            { name: "Supplier Returns", href: "/payments", icon:  ArrowLongLeftIcon, current: false },
-        ],
-    },
-    { name: "Warehouse", href: "/roles", icon: HomeModernIcon, current: false },
-    { name: "Reports", href: "/roles", icon: ChartBarSquareIcon, current: false },
+    { name: "Help", href: "/#", icon: XMarkIcon , current: false },
+
 ];
 
 const userNavigation = [
