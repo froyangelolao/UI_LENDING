@@ -130,9 +130,12 @@ async function login() {
             const response = await authService.login(params)
             if (response.data) {
                 localStorage.setItem("_token", response.data?.token)
+                alert("login successfully!");
                 navigateTo('/dashboard')
             }
         } catch (error: any) {
+            alert("something is wrong! please contact your adminstrator!");
+            alert("error: " + state.error);
             state.error = error
         }
         state.isPageLoading = false
