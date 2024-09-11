@@ -6,7 +6,7 @@
         <!-- <h1 class="text-3xl font-bold text-gray-800">LendCash</h1> -->
         <nav class="hidden md:flex gap-10">
           <a href="features" class="text-gray-600 hover:text-gray-800 font-bold">Features</a>
-          <a href="pricing" class="text-gray-600 hover:text-gray-800 font-bold">Pricing</a>
+          <!-- <a href="pricing" class="text-gray-600 hover:text-gray-800 font-bold">Pricing</a> -->
           <a href="about" class="text-gray-600 hover:text-gray-800 font-bold">About</a>
           <a href="/" class="text-gray-600 hover:text-gray-800 font-bold">Blog</a>
           <a href="contact" class="text-gray-600 hover:text-gray-800 font-bold">Contact</a>
@@ -25,7 +25,9 @@
           <h2 class="text-5xl font-bold text-gray-800 mb-4">LendCash Microfinance System for ERD Financial Solution </h2>
           <p class="text-lg text-gray-600 mb-8">An Online Microfinance Lending System.</p>
           <div class="flex gap-4">
-            <button class="bg-black text-white px-4 py-2 rounded-md hover:bg-green-900">Apply Now</button>
+            <button class="bg-black text-white px-4 py-2 rounded-md hover:bg-green-900">
+              <a href="register-form">Apply Now</a>
+            </button>
             <!-- <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300">GitHub Repo</button> -->
           </div>
         </div>
