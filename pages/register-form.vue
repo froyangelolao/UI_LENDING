@@ -80,9 +80,9 @@
               <button
                 class="px-6 py-3 rounded-full bg-purple-600 text-white"
                 type="button"
-                @click="index"
+                
               >
-                Cancel
+              <a href="/"> Cancel</a>
               </button>
               <button class="px-6 py-3 rounded-full bg-purple-600 text-white" type="button">
                 

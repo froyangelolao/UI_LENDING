@@ -6,7 +6,7 @@
         <!-- <h1 class="text-3xl font-bold text-gray-800">LendCash</h1> -->
         <nav class="hidden md:flex gap-10">
           <a href="features" class="text-gray-600 hover:text-gray-800 font-bold">Features</a>
-          <!-- <a href="pricing" class="text-gray-600 hover:text-gray-800 font-bold">Pricing</a> -->
+          <a href="create_employee" class="text-gray-600 hover:text-gray-800 font-bold">Pricing</a>
           <a href="about" class="text-gray-600 hover:text-gray-800 font-bold">About</a>
           <a href="/" class="text-gray-600 hover:text-gray-800 font-bold">Blog</a>
           <a href="contact" class="text-gray-600 hover:text-gray-800 font-bold">Contact</a>
@@ -222,7 +222,7 @@
           <a href="javascript:void()">
             <svg
               class="w-6 h-6 hover:text-gray-500 duration-150"
-              fill="currentColor"
+              fill="currentCo\"
               viewBox="0 0 48 48"
             >
               <g clip-path="url(#clip0_17_63)">
