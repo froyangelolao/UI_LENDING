@@ -66,7 +66,7 @@
         </div> -->
   
         <div class="border-b border-gray-900/10 pb-12">
-          <h1 class="text-xl font-bold leading-7 text-gray-900">Add Employee</h1>
+          <h1 class="text-xl font-bold leading-7 text-gray-900">Update Employee</h1>
           <p class="mt-1 text-sm leading-6 text-gray-600">LendCash.</p>
   
           <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -97,27 +97,6 @@
                 <input type="date" name="date_hired" id="date_hired" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
               </div>
             </div>
-
-            <div class="sm:col-span-1">
-              <label for="Civil Status" class="block text-sm font-bold leading-6 text-gray-900">Position <span class="text-red-600">*</span></label>
-              <div class="mt-2">
-                <!-- <input type="text" name="gender_code" id="gender_code" autocomplete="gender_code" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-l sm:leading-6" /> -->
-                <select id="gender_code" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                  <option>Loan Manager</option>
-                  <option>Loan Collector</option>
-                  <option>Clerk</option>
-                  <option>Admin</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="sm:col-span-1">
-              <label for="salary" class="block text-sm font-bold leading-6 text-gray-900">Employee Salary <span class="text-red-600">*</span></label>
-              <div class="mt-2">
-                <input type="number" name="salary" id="salary" autocomplete="salary1" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-              </div>
-            </div>
-
 
             <div class="sm:col-span-2">
               <label for="Date Resigned" class="block text-sm font-bold leading-6 text-gray-900">Date Resigned <span class="text-red-600">*</span></label>
@@ -165,7 +144,7 @@
               </div>
             </div>
 
-            <div class="sm:col-span-1">
+            <div class="sm:col-span-2">
               <label for="Civil Status" class="block text-sm font-bold leading-6 text-gray-900">Civil Status <span class="text-red-600">*</span></label>
               <div class="mt-2">
                 <!-- <input type="text" name="gender_code" id="gender_code" autocomplete="gender_code" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-l sm:leading-6" /> -->
@@ -189,7 +168,7 @@
               </div>
             </div>
 
-            <div class="sm:col-span-4">
+            <div class="sm:col-span-3">
               <label for="street-address" class="block text-sm font-bold leading-6 text-gray-900">Street address <span class="text-red-600">*</span></label>
               <div class="mt-2">
                 <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />

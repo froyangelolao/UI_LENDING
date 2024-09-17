@@ -66,7 +66,7 @@
         </div> -->
   
         <div class="border-b border-gray-900/10 pb-12">
-          <h1 class="text-xl font-bold leading-7 text-gray-900">Add Customer</h1>
+          <h1 class="text-xl font-bold leading-7 text-gray-900">Update Customer</h1>
           <p class="mt-1 text-sm leading-6 text-gray-600">LendCash.</p>
   
           <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
