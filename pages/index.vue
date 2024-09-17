@@ -6,7 +6,7 @@
         <!-- <h1 class="text-3xl font-bold text-gray-800">LendCash</h1> -->
         <nav class="hidden md:flex gap-10">
           <a href="features" class="text-gray-600 hover:text-gray-800 font-bold">Features</a>
-          <a href="" class="text-gray-600 hover:text-gray-800 font-bold">Pricing</a>
+          <a href="dashboard_libraries_roles" class="text-gray-600 hover:text-gray-800 font-bold">Pricing</a>
           <a href="about" class="text-gray-600 hover:text-gray-800 font-bold">About</a>
           <a href="/" class="text-gray-600 hover:text-gray-800 font-bold">Blog</a>
           <a href="contact" class="text-gray-600 hover:text-gray-800 font-bold">Contact</a>
